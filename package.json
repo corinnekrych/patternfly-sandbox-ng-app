@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,6 +21,9 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
+    "patternfly": "^3.54.2",
+    "patternfly-ng": "^4.5.1",
+    "patternfly-sandbox-ng": "file:../patternfly-sandbox-ng-demo/dist/patternfly-sandbox-ng/patternfly-sandbox-ng-0.0.1.tgz",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

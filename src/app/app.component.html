@@ -1,20 +1,53 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome!
   </h1>
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+
+
+<pfng-tree-list #treeList
+                [actionTemplate]="actionTemplate"
+                [config]="treeListConfig"
+                [itemTemplate]="itemTemplate"
+                [items]="items"
+                [loadTemplate]="loadTemplate"
+>
+    <ng-template #loadTemplate let-node="node" let-index="index">
+        <span>Loading...</span>
+    </ng-template>
+    <ng-template #itemTemplate let-node="node" let-index="index">
+        <div class="list-pf-left">
+            <span class="fa list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
+        </div>
+        <div class="list-pf-content-wrapper">
+            <div class="list-pf-main-content">
+                <div class="list-pf-title">NAME</div>
+                <div class="list-pf-description text-overflow-pf">ADDRESS</div>
+            </div>
+            <div class="list-pf-additional-content">
+                <div>
+                    <span class="pficon pficon-screen"></span>
+                    <strong>{{node.data.hostCount}}</strong> Hosts
+                </div>
+                <div>
+                    <span class="pficon pficon-cluster"></span>
+                    <strong>{{node.data.clusterCount}}</strong> Clusters
+                </div>
+                <div>
+                    <span class="pficon pficon-container-node"></span>
+                    <strong>{{node.data.nodeCount}}</strong> Nodes
+                </div>
+                <div>
+                    <span class="pficon pficon-image"></span>
+                    <strong>{{node.data.imageCount}}</strong> Images
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #actionTemplate let-node="node" let-index="index">
+        some action
+    </ng-template>
+</pfng-tree-list>
