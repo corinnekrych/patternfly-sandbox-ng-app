@@ -23,7 +23,7 @@
     "core-js": "^2.5.4",
     "patternfly": "^3.54.2",
     "patternfly-ng": "^4.5.1",
-    "patternfly-sandbox-ng": "file:../patternfly-sandbox-ng-demo/dist/patternfly-sandbox-ng/patternfly-sandbox-ng-0.0.1.tgz",
+    "patternfly-sandbox-ng": "file:../patternfly-sandbox-ng/dist/patternfly-sandbox-ng/patternfly-sandbox-ng-0.0.1.tgz",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
