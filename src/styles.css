@@ -2,6 +2,11 @@
 .list-pf-container {
        background-color: burlywood;
 }
+
+.pfng-tree-list-dnd-slot {
+    padding-top: 15px;
+    background-color: beige;
+}
 h1 {
     background-color: beige;
 }
